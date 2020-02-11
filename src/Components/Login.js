@@ -2,6 +2,7 @@ import React from "react";
 import "./Login.css";
 import { connect } from "react-redux";
 import { LoginUser } from "../REDUX/Actions";
+//import axios from 'axios';
 import { Redirect } from "react-router";
 class Login extends React.Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class Login extends React.Component {
       password: this.state.password
     };
     console.log("cp", user);
-    this.props.LoginUser(user);
+    this.props.Login(user);
     if (this.props.user.length > 0) {
       return <Redirect to="/movieList" />;
     }
@@ -102,7 +103,7 @@ const mapStateToProps = state => {
 
 const mapDispacthToProps = dispatch => {
   return {
-    LoginUser: user => dispatch(LoginUser(user))
+    Login: user => dispatch(LoginUser(user))
   };
 };
 
