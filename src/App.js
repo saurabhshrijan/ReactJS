@@ -11,7 +11,7 @@ export default function App() {
     <Provider store={store}>
       <BrowserRouter>
         <div className="App">
-          <Route exact path="/" component={Nav} />
+          <Route path="/" component={Nav} />
           <Switch>
             {/* <Route Path='/' render= {props =>
       <div>
@@ -20,7 +20,7 @@ export default function App() {
       </div>}
       /> */}
             <Route exact path="/" component={Login} />
-            <Route exact path="/movieList" component={MovieList} />
+            <Route path="/movieList" component={MovieList} />
           </Switch>
         </div>
       </BrowserRouter>

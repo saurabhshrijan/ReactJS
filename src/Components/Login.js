@@ -24,15 +24,15 @@ class Login extends React.Component {
       userName: this.state.userName,
       password: this.state.password
     };
-    console.log("cp", user);
-    this.props.Login(user);
-    if (this.props.user.length > 0) {
-      return <Redirect to="/movieList" />;
-    }
+    // console.log("cp", user);
+
+    this.props.LoginUser(user); //async call
   }
   render() {
-    console.log("xc", this.props);
-
+    console.log("inside loginjs render", this.props);
+    if (this.props.user.length > 1) {
+      return <Redirect to="/movieList" />;
+    }
     return (
       <div className="container">
         <div className="row">
@@ -103,7 +103,7 @@ const mapStateToProps = state => {
 
 const mapDispacthToProps = dispatch => {
   return {
-    Login: user => dispatch(LoginUser(user))
+    LoginUser: user => dispatch(LoginUser(user))
   };
 };
 

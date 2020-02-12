@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Logout } from "../REDUX/Actions";
+import { Redirect } from "react-router";
 class Nav extends React.Component {
   constructor(props) {
     super(props);
@@ -13,10 +14,11 @@ class Nav extends React.Component {
     this.props.LogOut();
   };
   render() {
-    console.log("nav", this.props.logInUser);
+    // console.log('the props in the nav are ',this.props);
+    //console.log("nav loggging the name ", this.props.logInUser);
     //const name=this.props.logInUser;
     let UserName = this.props.logInUser;
-    if (this.props.logInUser.length > 0) {
+    if (this.props.logInUser.length > 1) {
       return (
         <>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -63,6 +65,7 @@ class Nav extends React.Component {
     } else {
       return (
         <>
+          <Redirect to="/" />
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href={"/"}>
               Login

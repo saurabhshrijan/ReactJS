@@ -1,12 +1,14 @@
 import axios from "axios";
 const Logout = () => {
+  //console.log('doing logout')
   return dispatch => {
-    dispatch({ type: "LOGOUT", payload: null });
+    //console.log('doing logout before dipatch()');
+    dispatch({ type: "LOGOUT", payload: "" });
   };
 };
 const LoginUser = user => {
   return dispatch => {
-    console.log("fetching");
+    console.log("fetching.....");
     axios
       .get("https://jsonplaceholder.typicode.com/users", {
         params: { email: user.userName }
@@ -21,4 +23,4 @@ const LoginUser = user => {
   };
 };
 
-export default { LoginUser, Logout };
+export { LoginUser, Logout };

@@ -5,7 +5,7 @@ const initialState = {
 const getUserReducer = (state = initialState, action) => {
   switch (action.type) {
     case "GET_USER":
-      console.log("returning from reducer", { user: action.payload });
+      //console.log("returning from reducer", { ...state, Name: action.payload });
       return { ...state, Name: action.payload };
     case "LOGOUT":
       return { ...state, Name: action.payload };
