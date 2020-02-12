@@ -1,18 +1,27 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Logout } from "../REDUX/Actions";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 import { Redirect } from "react-router";
 class Nav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: ""
+      stateName: ""
     };
     this.onLogOut = this.onLogOut.bind(this);
+    this.handleOnDropdown = this.handleOnDropdown.bind(this);
   }
   onLogOut = () => {
     this.props.LogOut();
   };
+
+  handleOnDropdown(value) {
+    console.log("inside");
+    console.log("inhandleondropdown", this.state);
+    this.setState({ stateName: value });
+    console.log("after", this.state);
+  }
   render() {
     // console.log('the props in the nav are ',this.props);
     //console.log("nav loggging the name ", this.props.logInUser);
@@ -51,6 +60,31 @@ class Nav extends React.Component {
                   <a className="nav-link" href={"/"}>
                     Link
                   </a>
+                </li>
+                <li>
+                  <DropdownButton
+                    id="dropdown-item-button"
+                    title="Dropdown button"
+                  >
+                    <Dropdown.Item
+                      as="button"
+                      onClick={() => this.handleOnDropdown("bangalore")}
+                    >
+                      Bangalore
+                    </Dropdown.Item>
+                    <Dropdown.Item
+                      as="button"
+                      onClick={() => this.handleOnDropdown("pune")}
+                    >
+                      Pune
+                    </Dropdown.Item>
+                    <Dropdown.Item
+                      as="button"
+                      onClick={() => this.handleOnDropdown("hyderabad")}
+                    >
+                      Hyderabad
+                    </Dropdown.Item>
+                  </DropdownButton>
                 </li>
                 <li className="nav-item">
                   <button className="btn btn-primamry" onClick={this.onLogOut}>
