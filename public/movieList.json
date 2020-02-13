@@ -4,55 +4,63 @@
     "location": ["bangalore", "pune", "hyderabad"],
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
-    "rating": "5"
+    "rating": "5",
+    "thumbnail": "./pic.jpg"
   },
   {
     "name": "b",
     "location": ["bangalore", "hyderabad"],
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
-    "rating": "3.5"
+    "rating": "3.5",
+    "thumbnail": "./pic.jpg"
   },
   {
     "name": "c",
     "location": ["bangalore", "pune"],
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
-    "rating": "4.5"
+    "rating": "4.5",
+    "thumbnail": "./pic.jpg"
   },
   {
     "name": "d",
     "location": ["pune", "hyderabad"],
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
-    "rating": "5"
+    "rating": "5",
+    "thumbnail": "./pic.jpg"
   },
   {
     "name": "e",
     "location": ["bangalore", "pune", "hyderabad"],
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
-    "rating": "2.9"
+    "rating": "2.9",
+    "thumbnail": "./pic.jpg"
   },
   {
     "name": "f",
     "location": ["pune", "hyderabad"],
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
-    "rating": "4.2"
+    "rating": "4.2",
+    "thumbnail": "./pic.jpg"
   },
   {
     "name": "g",
     "location": ["bangalore", "pune", "hyderabad"],
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
-    "rating": "1.5"
+    "rating": "1.5",
+    "thumbnail": "./pic.jpg"
   },
   {
     "name": "h",
     "location": ["bangalore", "hyderabad"],
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
-    "rating": "2.7"
+    "rating": "2.7",
+    "thumbnail": "./pic.jpg"
   }
 ]

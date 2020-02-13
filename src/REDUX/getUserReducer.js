@@ -1,6 +1,7 @@
 const initialState = {
   Name: {},
-  movies: []
+  movies: [],
+  selectedMovie: []
 };
 
 const getUserReducer = (state = initialState, action) => {
@@ -17,8 +18,15 @@ const getUserReducer = (state = initialState, action) => {
       return { ...state, movies: action.payload };
 
     case "BOOK_MOVIE":
-      const z = state.movies.find(value => value === action.payload);
-      return { ...state, movies: z };
+      const z = [];
+      state.movies.forEach(values => {
+        if (values.name === action.payload) {
+          z.push(values);
+        }
+      });
+      console.log("intial state before change", state);
+      console.log("in reducer bookmovie", z);
+      return { ...state, selectedMovie: z };
 
     default:
       return state;

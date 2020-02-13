@@ -1,8 +1,9 @@
 import React from "react";
-// import {Redirect} from 'react-router';
+import { Redirect } from "react-router";
+
 import { connect } from "react-redux";
 import { Card, Button } from "react-bootstrap";
-// import {bookMovie} from '../REDUX/Actions';
+import { bookMovie } from "../REDUX/Actions";
 class MovieList extends React.Component {
   constructor() {
     super();
@@ -10,8 +11,7 @@ class MovieList extends React.Component {
   }
   handleBooking(movieName) {
     console.log("cp");
-
-    this.props.book(movieName);
+    this.props.bookMovie(movieName);
   }
   componentDidMount() {
     console.log("inside component did mount");
@@ -19,8 +19,13 @@ class MovieList extends React.Component {
     console.log(this.props.movieListArray);
   }
   render() {
-    console.log("render method");
-    console.log(this.props.movieListArray);
+    if (this.props.fetchedMovie.length) {
+      console.log("fetched movie", this.props.fetchedMovie);
+      return <Redirect to="/book" />;
+    }
+    console.log("render method of movieList");
+    console.log("looging all props", this.props);
+    // console.log(this.props.movieListArray);
     const movies = this.props.movieListArray.map(values => {
       return (
         <div key={Math.random()}>
@@ -51,18 +56,19 @@ class MovieList extends React.Component {
 }
 const mapStatetoProps = state => {
   return {
-    movieListArray: state.user.movies
+    movieListArray: state.user.movies,
+    fetchedMovie: state.user.selectedMovie
   };
 };
-// const mapDispatchToProps=(dispatch)=>{
-//   return {
-//     book:(movieName)=>{
-//       dispatch(bookMovie(movieName))
-//     }
-//   }
-//};
+const mapDispatchToProps = dispatch => {
+  return {
+    bookMovie: movieName => {
+      dispatch(bookMovie(movieName));
+    }
+  };
+};
 
 export default connect(
   mapStatetoProps,
-  null
+  mapDispatchToProps
 )(MovieList);

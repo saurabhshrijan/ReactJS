@@ -28,7 +28,7 @@ const selectedMovie = value => {
     axios
       .get("./movieList.json", {
         params: {
-          name: "a"
+          name: value
         }
       })
       .then(res => {
@@ -41,9 +41,15 @@ const selectedMovie = value => {
   };
 };
 const bookMovie = movieName => {
+  console.log("inside bookMovie", movieName);
   return dispatch => {
+    console.log("opening....");
     dispatch({ type: "BOOK_MOVIE", payload: movieName });
   };
+};
+const getTheater = () => {
+  console.log("inside getTheater");
+  return dispatch => {};
 };
 const LoginUser = user => {
   return dispatch => {
@@ -62,4 +68,4 @@ const LoginUser = user => {
   };
 };
 
-export { LoginUser, Logout, selectedMovie, getMovies, bookMovie };
+export { LoginUser, Logout, selectedMovie, getMovies, bookMovie, getTheater };
