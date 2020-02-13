@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Logout } from "../REDUX/Actions";
+import { Logout, selectedMovie } from "../REDUX/Actions";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import { Redirect } from "react-router";
 class Nav extends React.Component {
@@ -17,10 +17,12 @@ class Nav extends React.Component {
   };
 
   handleOnDropdown(value) {
-    console.log("inside");
-    console.log("inhandleondropdown", this.state);
-    this.setState({ stateName: value });
-    console.log("after", this.state);
+    // console.log("inside");
+    // console.log("inhandleondropdown", this.state);
+    // this.setState({ stateName: value });
+    //console.log("after", this.state);
+
+    this.props.selectedmovie(value);
   }
   render() {
     // console.log('the props in the nav are ',this.props);
@@ -74,13 +76,13 @@ class Nav extends React.Component {
                     </Dropdown.Item>
                     <Dropdown.Item
                       as="button"
-                      onClick={() => this.handleOnDropdown("pune")}
+                      // onClick={() => this.handleOnDropdown("pune")}
                     >
                       Pune
                     </Dropdown.Item>
                     <Dropdown.Item
                       as="button"
-                      onClick={() => this.handleOnDropdown("hyderabad")}
+                      // onClick={() => this.handleOnDropdown("hyderabad")}
                     >
                       Hyderabad
                     </Dropdown.Item>
@@ -143,11 +145,16 @@ const mapDispatchToProps = dispatch => {
   return {
     LogOut: () => {
       dispatch(Logout());
+    },
+    selectedmovie: value => {
+      dispatch(selectedMovie(value));
     }
   };
 };
 const mapStateToProps = state => {
-  return { logInUser: state.user.Name };
+  return {
+    logInUser: state.user.Name
+  };
 };
 export default connect(
   mapStateToProps,

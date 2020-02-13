@@ -1,5 +1,6 @@
 const initialState = {
-  Name: {}
+  Name: {},
+  movies: []
 };
 
 const getUserReducer = (state = initialState, action) => {
@@ -9,6 +10,16 @@ const getUserReducer = (state = initialState, action) => {
       return { ...state, Name: action.payload };
     case "LOGOUT":
       return { ...state, Name: action.payload };
+
+    case "GET_MOVIES":
+      const x = { ...state, movies: action.payload };
+      console.log("in reducer getmovie state become ", x);
+      return { ...state, movies: action.payload };
+
+    case "BOOK_MOVIE":
+      const z = state.movies.find(value => value === action.payload);
+      return { ...state, movies: z };
+
     default:
       return state;
   }

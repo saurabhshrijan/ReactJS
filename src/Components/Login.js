@@ -1,7 +1,7 @@
 import React from "react";
 import "./Login.css";
 import { connect } from "react-redux";
-import { LoginUser } from "../REDUX/Actions";
+import { LoginUser, getMovies } from "../REDUX/Actions";
 //import axios from 'axios';
 import { Redirect } from "react-router";
 class Login extends React.Component {
@@ -31,6 +31,8 @@ class Login extends React.Component {
   render() {
     console.log("inside loginjs render", this.props);
     if (this.props.user.length > 1) {
+      this.props.getMovies();
+
       return <Redirect to="/movieList" />;
     }
     return (
@@ -103,7 +105,10 @@ const mapStateToProps = state => {
 
 const mapDispacthToProps = dispatch => {
   return {
-    LoginUser: user => dispatch(LoginUser(user))
+    LoginUser: user => dispatch(LoginUser(user)),
+    getMovies: () => {
+      dispatch(getMovies());
+    }
   };
 };
 

@@ -6,6 +6,7 @@ import Nav from "./Components/Nav";
 import Login from "./Components/Login";
 import store from "../src/REDUX/store";
 import MovieList from "./Components/MovieList";
+import movieDetails from "./Components/movieDetails";
 export default function App() {
   return (
     <Provider store={store}>
@@ -21,6 +22,7 @@ export default function App() {
       /> */}
             <Route exact path="/" component={Login} />
             <Route path="/movieList" component={MovieList} />
+            <Route path="/book" component={movieDetails} />
           </Switch>
         </div>
       </BrowserRouter>
