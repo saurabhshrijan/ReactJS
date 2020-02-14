@@ -25,12 +25,12 @@ const selectedMovie = value => {
   return dispatch => {
     console.log("fetching movie details....");
     console.log("fetching movie of", value);
+    const params = {
+      name: "a",
+      rating: "5"
+    };
     axios
-      .get("./movieList.json", {
-        params: {
-          name: value
-        }
-      })
+      .get("./movieList.json", { params })
       .then(res => {
         console.log(res.data);
         console.log(res.data[0].name);
@@ -55,7 +55,7 @@ const LoginUser = user => {
   return dispatch => {
     console.log("fetching.....");
     axios
-      .get("https://jsonplaceholder.typicode.com/users", {
+      .get("./users.json", {
         params: { email: user.userName }
       })
       .then(res => {

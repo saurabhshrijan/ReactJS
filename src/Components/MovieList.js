@@ -2,7 +2,7 @@ import React from "react";
 import { Redirect } from "react-router";
 
 import { connect } from "react-redux";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import { bookMovie } from "../REDUX/Actions";
 class MovieList extends React.Component {
   constructor() {
@@ -26,16 +26,21 @@ class MovieList extends React.Component {
     console.log("render method of movieList");
     console.log("looging all props", this.props);
     // console.log(this.props.movieListArray);
-    const movies = this.props.movieListArray.map(values => {
+
+    const movies = this.props.movieListArray.map((values, index) => {
+      let lang = "";
+      values.language.forEach(item => {
+        lang = lang + " " + item;
+      });
       return (
-        <div key={Math.random()}>
-          <Card style={{ width: "18rem" }}>
-            <Card.Img variant="top" src={values.thumbanail} alt={values.name} />
+        <Col md="3" key={Math.random()}>
+          <Card style={{ width: "15rem" }}>
+            <Card.Img variant="top" src={values.thumbnail} alt={values.name} />
             <Card.Body>
               <Card.Title>{values.name}</Card.Title>
               <Card.Text>
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                <p>{lang}</p>
+                <p>Rating: {values.rating}</p>
               </Card.Text>
               <Card.Text>{movies}</Card.Text>
               <Button
@@ -48,10 +53,16 @@ class MovieList extends React.Component {
               </Button>
             </Card.Body>
           </Card>
-        </div>
+        </Col>
       );
     });
-    return <>{movies}</>;
+    return (
+      <React.Fragment>
+        <Container>
+          <Row>{movies}</Row>
+        </Container>
+      </React.Fragment>
+    );
   }
 }
 const mapStatetoProps = state => {

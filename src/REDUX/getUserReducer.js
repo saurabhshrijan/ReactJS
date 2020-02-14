@@ -10,7 +10,7 @@ const getUserReducer = (state = initialState, action) => {
       //console.log("returning from reducer", { ...state, Name: action.payload });
       return { ...state, Name: action.payload };
     case "LOGOUT":
-      return { ...state, Name: action.payload };
+      return { ...state, Name: action.payload, movies: [], selectedMovie: [] };
 
     case "GET_MOVIES":
       const x = { ...state, movies: action.payload };

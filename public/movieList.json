@@ -1,11 +1,11 @@
 [
   {
-    "name": "a",
+    "name": "Wonder Women",
     "location": ["bangalore", "pune", "hyderabad"],
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
     "rating": "5",
-    "thumbnail": "./pic.jpg"
+    "thumbnail": "https://images-na.ssl-images-amazon.com/images/I/71mXxk4La1L._AC_SY679_.jpg"
   },
   {
     "name": "b",
@@ -13,7 +13,7 @@
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
     "rating": "3.5",
-    "thumbnail": "./pic.jpg"
+    "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTE0YWFmOTMtYTU2ZS00ZTIxLWE3OTEtYTNiYzBkZjViZThiXkEyXkFqcGdeQXVyODMzMzQ4OTI@._V1_.jpg"
   },
   {
     "name": "c",
@@ -21,7 +21,7 @@
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
     "rating": "4.5",
-    "thumbnail": "./pic.jpg"
+    "thumbnail": "https://cdn.collider.com/wp-content/uploads/2018/12/iron-man-poster.jpg"
   },
   {
     "name": "d",
@@ -29,7 +29,7 @@
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
     "rating": "5",
-    "thumbnail": "./pic.jpg"
+    "thumbnail": "https://media.comicbook.com/2017/10/captain-america-the-first-avenger-movie-poster-marvel-cinematic--1038891.jpeg"
   },
   {
     "name": "e",
@@ -37,7 +37,7 @@
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
     "rating": "2.9",
-    "thumbnail": "./pic.jpg"
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS6_Oi0DPickj4C6jitQWVpppUW4f3NF4wsrn0AT6kHLiYf6XQB"
   },
   {
     "name": "f",
@@ -45,7 +45,7 @@
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
     "rating": "4.2",
-    "thumbnail": "./pic.jpg"
+    "thumbnail": "https://media.comicbook.com/2017/10/thor-movie-poster-marvel-cinematic-universe-1038890.jpg"
   },
   {
     "name": "g",
@@ -53,7 +53,7 @@
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
     "rating": "1.5",
-    "thumbnail": "./pic.jpg"
+    "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjM1OTMxNzUyM15BMl5BanBnXkFtZTgwNjYzMTIzOTE@._V1_.jpg"
   },
   {
     "name": "h",
@@ -61,6 +61,70 @@
     "language": ["english", "hindi"],
     "type": ["3D", "2D"],
     "rating": "2.7",
-    "thumbnail": "./pic.jpg"
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRUIDkjAQeqddHtSrfoTXkwSQ65vbyZeSkjLs5DID_0mFxF6PIA"
+  },
+  {
+    "name": "i",
+    "location": ["bangalore", "hyderabad"],
+    "language": ["english", "hindi"],
+    "type": ["3D", "2D"],
+    "rating": "2.7",
+    "thumbnail": "https://i2.wp.com/batman-news.com/wp-content/uploads/2019/09/Joker-Official-Images-Fandango-Poster-01.jpg?quality=80&strip=info&ssl=1"
+  },
+  {
+    "name": "j",
+    "location": ["bangalore", "hyderabad"],
+    "language": ["english", "hindi"],
+    "type": ["3D", "2D"],
+    "rating": "2.7",
+    "thumbnail": "https://i2.wp.com/batman-news.com/wp-content/uploads/2019/09/Joker-Official-Images-Fandango-Poster-01.jpg?quality=80&strip=info&ssl=1"
+  },
+  {
+    "name": "k",
+    "location": ["bangalore", "hyderabad"],
+    "language": ["english", "hindi"],
+    "type": ["3D", "2D"],
+    "rating": "2.7",
+    "thumbnail": "https://i2.wp.com/batman-news.com/wp-content/uploads/2019/09/Joker-Official-Images-Fandango-Poster-01.jpg?quality=80&strip=info&ssl=1"
+  },
+  {
+    "name": "l",
+    "location": ["bangalore", "hyderabad"],
+    "language": ["english", "hindi"],
+    "type": ["3D", "2D"],
+    "rating": "2.7",
+    "thumbnail": "https://i2.wp.com/batman-news.com/wp-content/uploads/2019/09/Joker-Official-Images-Fandango-Poster-01.jpg?quality=80&strip=info&ssl=1"
+  },
+  {
+    "name": "m",
+    "location": ["bangalore", "hyderabad"],
+    "language": ["english", "hindi"],
+    "type": ["3D", "2D"],
+    "rating": "2.7",
+    "thumbnail": "https://i2.wp.com/batman-news.com/wp-content/uploads/2019/09/Joker-Official-Images-Fandango-Poster-01.jpg?quality=80&strip=info&ssl=1"
+  },
+  {
+    "name": "n",
+    "location": ["bangalore", "hyderabad"],
+    "language": ["english", "hindi"],
+    "type": ["3D", "2D"],
+    "rating": "2.7",
+    "thumbnail": "https://i2.wp.com/batman-news.com/wp-content/uploads/2019/09/Joker-Official-Images-Fandango-Poster-01.jpg?quality=80&strip=info&ssl=1"
+  },
+  {
+    "name": "o",
+    "location": ["bangalore", "hyderabad"],
+    "language": ["english", "hindi"],
+    "type": ["3D", "2D"],
+    "rating": "2.7",
+    "thumbnail": "https://i2.wp.com/batman-news.com/wp-content/uploads/2019/09/Joker-Official-Images-Fandango-Poster-01.jpg?quality=80&strip=info&ssl=1"
+  },
+  {
+    "name": "p",
+    "location": ["bangalore", "hyderabad"],
+    "language": ["english", "hindi"],
+    "type": ["3D", "2D"],
+    "rating": "2.7",
+    "thumbnail": "https://i2.wp.com/batman-news.com/wp-content/uploads/2019/09/Joker-Official-Images-Fandango-Poster-01.jpg?quality=80&strip=info&ssl=1"
   }
 ]
